@@ -1,0 +1,12 @@
+.swipe {
+    overflow: hidden;
+}
+
+.swipe .slider {
+    display: flex;
+    position: relative;
+}
+
+.swipe .slider .slide {
+    min-width: 100%;
+}

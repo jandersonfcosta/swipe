@@ -47,8 +47,7 @@
 function Swipe(options) {
 	options = options ? options : {};
 
-	var tabbar = options.tabbar,
-    	speed = options.speed || "300ms",
+	var speed = options.speed || "300ms",
 		swipe = options.component || document.querySelector(".swipe"),
 		slider = swipe.querySelector(".slider"),
 		slides = swipe.querySelectorAll(".slide"),
@@ -68,9 +67,6 @@ function Swipe(options) {
     slider.addEventListener("touchstart", touchStart, false);
 	function touchStart(event) {
 		slider.style.webkitTransitionDuration = null; // null remove o atributo do elemento
-
-		if (tabbar)
-			tabbar.style.webkitTransitionDuration = null;
 
 		startX = event.targetTouches[0].clientX;
 		timeStart = new Date();
